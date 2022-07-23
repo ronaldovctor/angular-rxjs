@@ -1,0 +1,11 @@
+<div fxFill fxLayout="column" fxLayoutAlign="center start">
+    <div fxFill fxLayout="row" fxLayoutAlign="start center">
+        <button mat-button color="warn" (click)="subscribe()">Subscribe all</button>
+        <mat-spinner *ngIf="isSubscriptionsActive" diameter="20" color="warn"></mat-spinner>
+    </div>
+    <div>
+        <button mat-button color="primary" [disabled]="!isSubscriptionsActive" (click)="unsubscribe()">
+            Unsubscribe All
+        </button>
+    </div>
+</div>
